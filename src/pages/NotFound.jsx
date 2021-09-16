@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NotfoundIcon from "../assets/not_found.svg";
 
 const NotFound = () => {
@@ -13,11 +14,13 @@ const NotFound = () => {
         </p>
 
         <div className="flex justify-center mt-8">
-          <button className="bg-primary-500 rounded-md cursor-pointer">
-            <p className="py-2 md:py-4 px-4 md:px-8 text-center md:text-xl font-medium text-white">
-              GO BACK HOME
-            </p>
-          </button>
+          <Link to="/">
+            <button className="bg-primary-500 rounded-md cursor-pointer">
+              <p className="py-2 md:py-4 px-4 md:px-8 text-center md:text-xl font-medium text-white">
+                GO BACK HOME
+              </p>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
