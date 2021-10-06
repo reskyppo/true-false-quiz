@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeroIcon from "../assets/hero_icon.svg";
 
 const Home = () => {
@@ -22,9 +23,11 @@ const Home = () => {
 
         <div className="flex justify-center mt-16">
           <button className="bg-secondary-900 w-5/6 rounded-md cursor-pointer">
-            <p className="py-4 text-center text-2xl font-medium text-white">
-              Start quiz
-            </p>
+            <Link to="/quiz">
+              <p className="py-4 text-center text-2xl font-medium text-white">
+                Start quiz
+              </p>
+            </Link>
           </button>
         </div>
       </div>
