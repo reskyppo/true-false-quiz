@@ -2,25 +2,25 @@
     "number": 1,
     "question": "Prince Harry is taller than Prince William",
 
-    "answer": "false"
+    "answer": false
   }, {
     "number": 2,
     "question": "The star sign Aquarius is represented by a tiger",
-    "answer": "true"
+    "answer": true
   },
   {
     "number": 3,
     "question": "Meryl Streep has won two Academy Awards",
-    "answer": "false"
+    "answer": false
   },
   {
     "number": 4,
     "question": "Marrakesh is the capital of Morocco",
-    "answer": "false"
+    "answer": false
   },
   {
     "number": 5,
     "question": "Idina Menzel sings 'let it go' 20 times in 'Let It Go' from Frozen",
-    "answer": "false"
+    "answer": false
   }
 ]
