@@ -1,10 +1,23 @@
 import datas from "../utils/data.json";
 import { useState } from "react";
 import Progressbar from "../components/Progressbar";
+import { useHistory } from "react-router";
+
 const Quiz = () => {
+  const history = useHistory();
+
   const [userAnswer, setUserAnswer] = useState();
   const [currentPage, setCurrentPage] = useState(0);
+  const [score, setScore] = useState(0);
+
   const totalPage = datas.length;
+
+  const handleScore = () => {
+    userAnswer === datas[currentPage].answer && setScore(score + 1);
+    currentPage + 1 === totalPage && history.push("/result");
+    setCurrentPage(currentPage + 1);
+  };
+  
   return (
     <div className="bg-gray-100 h-screen flex justify-center ">
       <div className=" w-1/2  border-primary border-r-2 border-l-2 bg-white p-8">
@@ -24,18 +37,10 @@ const Quiz = () => {
             <button onClick={() => setUserAnswer(false)}>False</button>
           </div>
 
-          {userAnswer === datas[currentPage].answer && <p>yeay</p>}
           <div className="mt-8">
-            {currentPage + 1 !== totalPage ? (
-              <button
-                className="bg-primary-500"
-                onClick={() => setCurrentPage(currentPage + 1)}
-              >
-                Next
-              </button>
-            ) : (
-              <button className="bg-primary-500">Submit</button>
-            )}
+            <button className="bg-primary-500" onClick={handleScore}>
+              {currentPage + 1 !== totalPage ? "Next" : "Submit"}
+            </button>
           </div>
         </div>
       </div>
