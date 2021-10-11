@@ -9,9 +9,12 @@ export const scoresSlice = createSlice({
     addScore: (state) => {
       state.score += 1;
     },
+    resetScore: (state) => {
+      state.score = 0;
+    },
   },
 });
 
-export const { addScore } = scoresSlice.actions;
+export const { addScore, resetScore} = scoresSlice.actions;
 
 export default scoresSlice.reducer;
