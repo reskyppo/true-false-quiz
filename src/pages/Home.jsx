@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
 import HeroIcon from "../assets/hero_icon.svg";
+import Button from "../components/Button";
 
 const Home = () => {
   return (
@@ -22,13 +22,7 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center md:mt-16">
-          <button className="bg-secondary-300 w-5/6 rounded-md cursor-pointer">
-            <Link to="/quiz">
-              <p className="py-4 text-center text-2xl font-medium text-white">
-                Start quiz
-              </p>
-            </Link>
-          </button>
+          <Button url="/quiz" text="Start quiz" size="5/6" />
         </div>
       </div>
     </div>

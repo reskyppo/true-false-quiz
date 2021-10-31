@@ -4,6 +4,7 @@ import Progressbar from "../components/Progressbar";
 import { useHistory } from "react-router";
 import { useDispatch } from "react-redux";
 import { addScore } from "../features/scores/scoresSlice";
+import Button from "../components/Button";
 const Quiz = () => {
   const history = useHistory();
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Quiz = () => {
     userAnswer === datas[currentPage].answer && dispatch(addScore());
     currentPage + 1 === totalPage && history.push("/result");
     setCurrentPage(currentPage + 1);
-    setUserAnswer('')
+    setUserAnswer("");
   };
 
   return (
@@ -37,8 +38,9 @@ const Quiz = () => {
           <div className="mt-8 flex flex-col">
             <button
               className={`my-1 py-2 px-4 text-lg font-semibold rounded-lg ${
-                userAnswer === true ? "bg-secondary-300 ring-0 text-white"
-              : 'ring-1 ring-primary-300'
+                userAnswer === true
+                  ? "bg-secondary-300 ring-0 text-white"
+                  : "ring-1 ring-primary-300"
               }`}
               onClick={() => setUserAnswer(true)}
             >
@@ -46,8 +48,10 @@ const Quiz = () => {
             </button>
             <button
               className={`my-1 py-2 px-4 text-lg font-semibold rounded-lg ${
-                userAnswer === false ? "bg-secondary-300 ring-0 text-white"
-              : 'ring-1 ring-primary-300'}
+                userAnswer === false
+                  ? "bg-secondary-300 ring-0 text-white"
+                  : "ring-1 ring-primary-300"
+              }
               `}
               onClick={() => setUserAnswer(false)}
             >
@@ -56,9 +60,11 @@ const Quiz = () => {
           </div>
 
           <div className="mt-8 flex justify-end">
-            <button className="bg-secondary-300 ring-0 text-lg font-semibold text-white px-6 sm:px-12 py-2 sm:py-4 rounded-md" onClick={handleScore}>
-              {currentPage + 1 !== totalPage ? "Next" : "Submit"}
-            </button>
+            <Button
+              text={currentPage + 1 !== totalPage ? "Next" : "Submit"}
+              onClick={handleScore}
+              size="2/6"
+            />
           </div>
         </div>
       </div>

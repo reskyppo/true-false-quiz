@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { resetScore } from "../features/scores/scoresSlice";
 import TrophyIcon from "../assets/trophy_icon.svg";
+import Button from "../components/Button";
 
 const Result = () => {
   const score = useSelector((state) => state.scores.score);
@@ -24,13 +25,12 @@ const Result = () => {
           {score * 10}/100
         </p>
         <div className="flex justify-center md:mt-16">
-          <button className="bg-secondary-300 w-5/6 rounded-md cursor-pointer" onClick={()=> dispatch(resetScore())}>
-            <Link to="/">
-              <p className="py-4 text-center text-2xl font-medium text-white">
-                Try Again
-              </p>
-            </Link>
-          </button>
+          <Button
+            url="/"
+            text="Try Again"
+            onClick={() => dispatch(resetScore())}
+            size="5/6"
+          />
         </div>
       </div>
     </div>
