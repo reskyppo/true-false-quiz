@@ -17,12 +17,13 @@ const Quiz = () => {
     userAnswer === datas[currentPage].answer && dispatch(addScore());
     currentPage + 1 === totalPage && history.push("/result");
     setCurrentPage(currentPage + 1);
+    setUserAnswer('')
   };
 
   return (
-    <div className="bg-gray-100 h-screen flex justify-center ">
-      <div className=" w-1/2  border-primary border-r-2 border-l-2 bg-white p-8">
-        <p className="text-xl">
+    <div className="min-h-screen flex justify-center">
+      <div className="lg:w-1/2 bg-primary-700 p-8">
+        <p className="text-xl text-white mb-2">
           Question {datas[currentPage].number} / {totalPage}
         </p>
 
@@ -31,15 +32,31 @@ const Quiz = () => {
           totalPage={totalPage}
         />
 
-        <div className="mt-8">
-          <p>{datas[currentPage].question}</p>
+        <div className="mt-12 bg-white text-primary-700 px-4 sm:px-8 py-8 sm:py-16 rounded-xl">
+          <p className="text-2xl font-bold">{datas[currentPage].question}</p>
           <div className="mt-8 flex flex-col">
-            <button onClick={() => setUserAnswer(true)}>True</button>
-            <button onClick={() => setUserAnswer(false)}>False</button>
+            <button
+              className={`my-1 py-2 px-4 text-lg font-semibold rounded-lg ${
+                userAnswer === true ? "bg-secondary-300 ring-0 text-white"
+              : 'ring-1 ring-primary-300'
+              }`}
+              onClick={() => setUserAnswer(true)}
+            >
+              True
+            </button>
+            <button
+              className={`my-1 py-2 px-4 text-lg font-semibold rounded-lg ${
+                userAnswer === false ? "bg-secondary-300 ring-0 text-white"
+              : 'ring-1 ring-primary-300'}
+              `}
+              onClick={() => setUserAnswer(false)}
+            >
+              False
+            </button>
           </div>
 
-          <div className="mt-8">
-            <button className="bg-primary-500" onClick={handleScore}>
+          <div className="mt-8 flex justify-end">
+            <button className="bg-secondary-300 ring-0 text-lg font-semibold text-white px-6 sm:px-12 py-2 sm:py-4 rounded-md" onClick={handleScore}>
               {currentPage + 1 !== totalPage ? "Next" : "Submit"}
             </button>
           </div>
