@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { resetScore } from "../features/scores/scoresSlice";
 import TrophyIcon from "../assets/trophy_icon.svg";
 import Button from "../components/Button";
