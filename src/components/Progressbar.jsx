@@ -7,7 +7,7 @@ const Progressbar = ({ currentPage, totalPage }) => {
       <span
         className={`h-4 w-${
           totalPage - currentPage
-        }/${totalPage} bg-primary-100`}
+        }/${totalPage} bg-gray-300`}
       ></span>
       {totalPage === currentPage && (
         <span className={`h-4 w-full bg-secondary-300`}></span>
