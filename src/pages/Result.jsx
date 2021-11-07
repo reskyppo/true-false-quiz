@@ -7,7 +7,7 @@ const Result = () => {
   const score = useSelector((state) => state.scores.score);
   const dispatch = useDispatch();
   return (
-    <div className="bg-gray-100 h-screen flex justify-center ">
+    <div className="bg-gray-100 min-h-screen flex justify-center ">
       <div className="w-screen lg:w-1/2 bg-primary-700 p-4">
         <h2 className="text-center text-white text-xl mt-12">
           Congratulations!
