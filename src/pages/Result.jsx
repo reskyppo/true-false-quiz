@@ -9,14 +9,14 @@ const Result = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex justify-center ">
       <div className="w-screen lg:w-1/2 bg-primary-700 p-4">
-        <h2 className="text-center text-white text-xl mt-12">
+        <h2 className="text-center text-white text-xl lg:text-4xl mt-12">
           Congratulations!
         </h2>
 
         <img
           src={TrophyIcon}
           alt="An icon that represent trophy"
-          className="w-2/3 my-10 mx-auto"
+          className="w-2/3 lg:w-1/2 my-10 mx-auto"
         />
 
         <p className="text-center text-white text-lg ">You Scored</p>
