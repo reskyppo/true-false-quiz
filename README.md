@@ -1,6 +1,10 @@
 # **True False Quiz**
 
-## **Coming soon**
+## Description
+
+This project is the project I used to learn to implement redux, 
+you can see it in the `features` folder. 
+This project uses the concept of mobile first.
 
 ## Prerequisites
 - Node >= 12
