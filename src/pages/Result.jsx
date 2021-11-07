@@ -21,7 +21,7 @@ const Result = () => {
 
         <p className="text-center text-white text-lg ">You Scored</p>
         <p className="text-center text-white text-4xl font-bold mb-12">
-          {score * 10}/100
+          {score * 20}/100
         </p>
         <div className="flex justify-center md:mt-16">
           <Button
