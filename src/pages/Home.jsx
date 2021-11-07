@@ -22,7 +22,7 @@ const Home = () => {
         </div>
 
         <div className="flex justify-center md:mt-16">
-          <Button url="/quiz" text="Start quiz" size="5/6" />
+          <Button url="/quiz" text="Start quiz" size={5/6} />
         </div>
       </div>
     </div>

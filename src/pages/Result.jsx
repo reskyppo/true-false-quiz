@@ -28,7 +28,7 @@ const Result = () => {
             url="/"
             text="Try Again"
             onClick={() => dispatch(resetScore())}
-            size="5/6"
+            size={5/6}
           />
         </div>
       </div>

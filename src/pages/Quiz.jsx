@@ -63,7 +63,7 @@ const Quiz = () => {
             <Button
               text={currentPage + 1 !== totalPage ? "Next" : "Submit"}
               onClick={handleScore}
-              size="2/6"
+              size={2/6}
             />
           </div>
         </div>

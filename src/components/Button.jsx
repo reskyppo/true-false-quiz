@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 const Button = ({ url, text, onClick, size }) => {
   return (
     <button
-      className={`bg-secondary-300 w-${size} rounded-md cursor-pointer`}
+      className="bg-secondary-300 rounded-md cursor-pointer"
+      style={{ width: size * 100 + "%" }}
       onClick={onClick}
     >
       {url ? (
